@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <script src="login.js"></script>
+</head>
+<body>
+    <form onsubmit="return collectData();">
+        <table>
+            <tr>
+                <td>Email</td>
+                <td>
+                    <input type="text" id="email" />
+                </td>
+                <td>
+                    <p id="emailErr" style="color: red"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>
+                    <input type="password" id="password" />
+                </td>
+                <td>
+                    <p id="passwordErr" style="color: red"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit">Submit</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Invalid Submissions:<span id="wrongCount">0</span></p>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
