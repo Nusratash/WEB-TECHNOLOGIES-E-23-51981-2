@@ -6,11 +6,14 @@ function collectData() {
     var emailErr = document.getElementById("emailErr");
     var passwordErr = document.getElementById("passwordErr");
     var countDisplay = document.getElementById("wrongCount");
+
     emailErr.innerHTML = "";
     passwordErr.innerHTML = "";
+
     var isValid = true;
+
     if (!email.includes("@")) {
-        emailErr.innerHTML = "Email must have @";
+        emailErr.innerHTML = "Email must contain '@'";
         isValid = false;
     }
 

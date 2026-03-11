@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="registration.css" />
+    <script src="Registration.js"></script>
+  </head>
+
+  <body>
+    <h1>Global Tech Connect</h1>
+    <h3>Registration Form</h3>
+    <form>
+      <table>
+        <tr>
+          <td>Full Name</td>
+          <td>
+            <input
+              type="text"
+              placeholder="Enter Name"
+              id="fullname"
+              onkeyup="return getFullName();"
+            />
+          </td>
+          <td>
+            <p id="nameErr" class="error-msg"></p>
+          </td>
+        </tr>
+        <tr>
+          <td>Professional Email</td>
+          <td>
+            <input
+              type="text"
+              placeholder="Enter Email"
+              id="email"
+              onchange="return getEmail();"
+            />
+          </td>
+          <td>
+            <p id="emailErr" class="error-msg"></p>
+          </td>
+        </tr>
+        <tr>
+          <td>Company</td>
+          <td>
+            <input type="text" id="company" placeholder="Optional" maxlength="100" />
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Attendance Type</td>
+          <td>
+            <input type="radio" name="attendance" id="virtual" value="Virtual" /> Virtual
+            <input type="radio" name="attendance" id="inperson" value="In-Person" /> In-Person
+          </td>
+          <td>
+            <p id="typeErr" class="error-msg"></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="submit-btn" type="submit" onclick="return collectData();">
+              Register
+            </button>
+          </td>
+        </tr>
+      </table>
+    </form>
+    <div>
+      <button id="btn" class="toggle-btn" onclick="showAnalytics()">
+        Show Event Analytics
+      </button>
+    </div>
+    <div id="analyticsPanel">
+      <h2>Event Insights</h2>
+      <p>Total Number of Registrants: <span id="total">0</span></p>
+      <p>Virtual Attendees: <span id="virtualNum">0</span></p>
+      <p>In-Person Attendees: <span id="inpersonNum">0</span></p>
+    </div>
+  </body>
+</html>
